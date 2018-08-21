@@ -28,7 +28,7 @@ attr_accessor :total, :items, :discount, :last_transaction
   end
 
   def void_last_transaction #uses the last_transaction identifier to void the previous transaction
-    binding.pry
+    # binding.pry
     self.last_transaction[2].times do
       self.items.delete(self.last_transaction[0])
     end
