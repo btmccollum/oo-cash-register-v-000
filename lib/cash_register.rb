@@ -28,7 +28,8 @@ attr_accessor :total, :items, :discount, :last_transaction
   end
 
   def void_last_transaction #uses the last_transaction identifier to void the previous transaction
-    last_transaction[2].times do
+    binding.pry
+    self.last_transaction[2].times do
       @items.delete(last_transaction[0])
     end
     @total -= last_transaction[2] * last_transaction[1]
