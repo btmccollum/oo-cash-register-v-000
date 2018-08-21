@@ -22,9 +22,9 @@ attr_accessor :total, :items, :discount, :last_transaction
   def add_item(title, price, quantity = 1)
     self.last_transaction = title, price, quantity #assigns the items being added in to an identifier
     quantity.times do
-      @items << title
+      self.items << title
     end
-    @total += quantity * price
+    self.total += quantity * price
   end
 
   def void_last_transaction #uses the last_transaction identifier to void the previous transaction
